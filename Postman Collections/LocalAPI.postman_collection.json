@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "f1215d08-d5a4-418d-b387-bafff8267d82",
+		"name": "LocalAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2603692"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jane Doe\",\r\n    \"email\": \"jane.doe@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Pyrhon_API_URL}}:{{Port}}/user",
+					"host": [
+						"{{Pyrhon_API_URL}}"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Pyrhon_API_URL}}:{{Port}}/user/6",
+					"host": [
+						"{{Pyrhon_API_URL}}"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"user",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
